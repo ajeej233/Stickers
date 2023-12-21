@@ -3,6 +3,7 @@ package com.example.spaarksstickers
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Typeface
+import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -25,7 +26,7 @@ import ja.spaarkssticker.stories.shape.ShapeBuilder
 import ja.spaarkssticker.stories.uifiles.tools.TextEditorDialogFragment
 import java.io.IOException
 
-class EditImageActivity : BaseActivity(), OnPhotoEditorListener, View.OnClickListener,
+public class EditImageActivity : BaseActivity(), OnPhotoEditorListener, View.OnClickListener,
     StickerBSFragment.StickerListener, EditingToolsAdapter.OnItemSelected {
      val PINCH_TEXT_SCALABLE_INTENT_KEY = "PINCH_TEXT_SCALABLE"
 
@@ -166,6 +167,28 @@ class EditImageActivity : BaseActivity(), OnPhotoEditorListener, View.OnClickLis
             }
         })
    */ }
+
+    override fun onEditTextChangeListener(
+        rootView: View,
+        text: String,
+        colorCode: Int,
+        background: Drawable,
+        textSize: Float
+    ) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onEditTextChangeListener(
+        rootView: View,
+        text: String,
+        colorCode: Int,
+        background: Drawable,
+        textSize: Float,
+        textValue: Int
+    ) {
+        TODO("Not yet implemented")
+    }
+
     override fun onAddViewListener(viewType: ViewType, numberOfAddedViews: Int) {
         Log.d(
             TAG,
@@ -182,6 +205,10 @@ class EditImageActivity : BaseActivity(), OnPhotoEditorListener, View.OnClickLis
 
     override fun onStartViewChangeListener(viewType: ViewType) {
         Log.d(TAG, "onStartViewChangeListener() called with: viewType = [$viewType]")
+    }
+
+    override fun onViewClicked(view: View) {
+        TODO("Not yet implemented")
     }
 
     override fun onStopViewChangeListener(viewType: ViewType) {
