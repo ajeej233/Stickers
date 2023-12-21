@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        maven {url 'https://www.jitpack.io'}
+
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url 'https://jitpack.io' }
+        maven { url  "https://dl.bintray.com/piasy/maven" }
+
+    }
+
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+
+    }
+}
+rootProject.name = "Spaarks Stickers"
+include ':app'
+include ':photoeditor'
